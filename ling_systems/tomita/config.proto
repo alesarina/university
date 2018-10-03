@@ -1,0 +1,16 @@
+encoding "utf8";
+
+TTextMinerConfig
+{
+  Dictionary = "dic.gzt";
+  Input = {File = "input.txt"}
+  Output = {File = "output.txt"
+            Format = text}
+  Articles = [{Name = "first_grammar"}]
+  
+  Facts = [
+        {Name = "Fact"}
+	]
+  
+  PrettyOutput = "pretty.html";
+}
