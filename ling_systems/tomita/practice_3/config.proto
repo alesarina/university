@@ -1,0 +1,21 @@
+encoding "utf8";
+TTextMinerConfig {
+  Dictionary = "dic.gzt";       // корневой словарь газеттира
+  PrettyOutput = "debug.html";  // файл с отладочным выводом
+  Input = {
+    File = "input.txt";          // файл с анализируемым текстом
+    Type = dpl;                 // режим чтения "document per line" (каждая строка - отдельный документ)
+  }
+  Articles = [
+    { Name = "РодилсяВ" }       // Запустить статью корневого словаря "РодилсяВ"
+  ]
+  Facts = [
+    { Name = "BornFact" }       // Сохранить факт "BornFact"
+  ]
+  Output = {
+    File = "facts.txt";         // Записать факты в файл "facts.txt"
+    Format = text;              // используя при этом простой текстовый формат
+  }
+
+  PrintTree="tree.txt";
+}
